@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcss.com/vue/2.5.10/vue.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+
+        }
+        .imgs{
+            width: 100%;
+            height: 600px;
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+
+        }
+        .img0{
+            background: url('http://i0.hdslb.com/bfs/article/6eb9a55fe223887c598001434ba6b6c3fc94678f.png') no-repeat center center/cover;  background-attachment:fixed;
+        }
+        .img1{
+            background: url('https://images2.alphacoders.com/944/thumb-1920-94492.jpg') no-repeat center center/cover;  background-attachment:fixed;
+        }
+        .img2{
+            background: url('https://images3.alphacoders.com/195/thumb-1920-195677.jpg') no-repeat center center/cover;  background-attachment:fixed;
+        }
+        .img3{
+            background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589891858916&di=3deaf1c09b294c0ea44b319e0d528470&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201701%2F19%2F20170119163422_cPwQY.jpeg') no-repeat center center/cover;  background-attachment:fixed;
+        }
+        .img4{
+            background: url('https://images5.alphacoders.com/994/thumb-1920-994176.jpg') no-repeat center center/cover;  background-attachment:fixed;
+        }
+        .img5{
+            background: url('http://pic1.win4000.com/pic/7/7d/f84c15b4ae.jpg') no-repeat center center/cover;  background-attachment:fixed;
+        }
+        .img6{
+            background: url('https://images6.alphacoders.com/322/thumb-1920-322751.jpg') no-repeat center center/cover;  background-attachment:fixed;
+        }
+        .img0,.img1,.img2,.img3,.img4,.img5,.img6 p{
+            color: #fff;
+            font-size: 50px;
+            font-weight: 300;
+            
+        }
+        .content{
+            margin: 0 auto;
+            width: 60%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content a{
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: blod;
+            color: cadetblue;
+        }
+        .content p{
+          
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 2rem;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+          <div class="imgs img0">
+            <p>{{msg[0]}}</p>
+        </div>
+         <div class="content">
+             <h2><a href='https://kuma154.github.io/2020/05/18/高清壁纸(persona5)/'>{{msg[0]}}</a></h2>
+            <p>{{content[0]}}</p>
+         </div>
+
+        <div class="imgs img1">
+            <p>{{msg[1]}}</p>
+        </div>
+        <div class="content">
+            <h2><a href='https://kuma154.github.io/2020/05/18/高清壁纸(persona4)/'>{{msg[1]}}</a></h2>
+            <p>{{content[1]}}</p>
+        </div>
+
+        <div class="imgs img2">
+            <p>{{msg[2]}}</p>
+        </div>
+        <div class="content">
+            <h2><a href='https://kuma154.github.io/2020/05/19/京阿尼(轻音少女)/'>{{msg[2]}}</a></h2>
+            <p>{{content[2]}}</p>
+        </div>
+
+        <div class="imgs img3">
+            <p>{{msg[3]}}</p>
+        </div>
+        <div class="content">
+            <h2><a href='https://kuma154.github.io/2020/05/19/京阿尼(吹响上低音号)/'>{{msg[3]}}</a></h2>
+            <p>{{content[3]}}</p>
+        </div>
+
+        <div class="imgs img4">
+            <p>{{msg[4]}}</p>
+        </div>
+        <div class="content">
+            <h2><a href='https://kuma154.github.io/2020/05/19/京阿尼(冰菓)/'>{{msg[4]}}</a></h2>
+            <p>{{content[4]}}</p>
+        </div>
+
+        <div class="imgs img5">
+            <p>{{msg[5]}}</p>
+        </div>
+        <div class="content">
+            <h2><a href='https://kuma154.github.io/2020/05/20/京阿尼(227)/'>{{msg[5]}}</a></h2>
+            <p>{{content[5]}}</p>
+        </div>
+
+        <div class="imgs img6">
+            <p>{{msg[6]}}</p>
+        </div>
+        <div class="content">
+            <h2><a href='https://kuma154.github.io/2020/05/20/京阿尼(中二病也要谈恋爱！)/'>{{msg[6]}}</a></h2>
+            <p>{{content[6]}}</p>
+        </div>
+
+      
+    </div>
+      
+        <script>
+            var Vue=new Vue({
+                el:'#main',
+                data:{
+                    msg:['女神异闻录5','女神异闻录4','轻音少女','吹响，上低音号','冰菓','22/7','中二病也要谈恋爱！'],
+                    content:[
+                        '高二的春天，雨宫莲转学到了东京的「秀尽学园」。因某事为契机而觉醒为“Persona”使用者的莲，与新认识的伙伴们组建了「心之怪盗团」。怪盗团员们去盗走陷进了罪恶欲望之中的成年人们的“扭曲的欲望”，让成年人们洗心革面。同时，难以让人理解的精神暴走事件在城市中的各个角落接连发生……。以大都市“东京”为舞台，一边是身为享受日常生活的高中生、一边是放学后身为「心之怪盗团」的暗地活跃——。壮大的恶汉罗曼故事，就此一触即发！',
+                        '《女神异闻录4》是ATLUS于2008年7月10日发售的PlayStation 2游戏，女神异闻录系列的第四季。主题颜色为“黄色” 。在一个乡间小镇中发生了奇怪的连续杀人事件，主角为了解决事件，亦为了自己的未来，开始展开战斗。前作采用手枪型召唤器唤醒Persona，而本作则放弃手枪召唤器，而是击碎画有自己Persona的卡召唤Persona。发售前有传闻眼镜是Persona的召唤器，但实际是在电视世界中，只要带上眼镜就可以看清楚充满浓雾的环境。 本作荣获日本游戏大赏 2009和Fami通アワード 2008的优秀赏，皆为得奖名单中唯一一款PS2游戏。 本作于2011年动画化，播出同名动画25集，已于2012年完结。并且在2012年6月发售了PlayStationVita平台的强化复刻版Persona4 Golden',
+                        '新学年开始，高中一年级新生平泽唯在误将“轻音乐”当做了“轻便、简易的音乐”，而由于自己小时候玩响板得到老师表扬，于是萌发申请入部的想法。另一方面，樱丘高中“轻音部”因原来的部员全部毕业离校，此时轻音部新成员只有秋山澪和田井中律两人，无法满足部员至少四人的最低人数要求即将废部，这下该如何是好呢？此外，温柔可爱的千金小姐琴吹䌷被律强拉进入轻音部。于是，这四名高一女生机缘巧合聚在了一起，便有了吉他手平泽唯、贝司手秋山澪、鼓手田井中律以及键盘手琴吹䌷，轻音部的故事也由此展开',
+                        '动画《吹响！上低音号》是改编自由武田绫乃的轻小说《吹响！上低音号～欢迎来到北宇治高中吹奏乐部～》。作品讲述的是北宇治高中吹奏乐部的成员们，在新就任的顾问的带领下以更高的目标奋斗的故事。',
+                        '在众多将要展开「玫瑰色」生活的高中生之中，本作的男主角折木奉太郎却是一个「灰色」的节能主义者。凡是没必要的事就不做，因为不想后悔，被人说是疏离、厌世也无所谓，因为这就是他的作风。这样的折木奉太郎，却因为姐姐的命令而进入了濒临废社的「古籍研究社」。研究社虽然好不容易招到了四名新社员，但却又卷入了四十五年前社长突然肄业的谜团之中。社长当年留下的名为「冰菓」的社刊，内里究竟隐藏了什么神秘的讯息呢……',
+                        '泷川美羽突然收到来自演艺事务所“G.I.P”的一封信。信上说被选为某个新项目的成员。她半信半疑地去了信上的地方，被命运引导一样地聚集了，包含美羽在内的的8个少女们。“你们将作为偶像组合正式出道”——被自称是合田的男子指引着，出现在她们眼前的是地下的绝密设施和神秘的“墙壁”。美羽8人向着光与暗交织的命运舞台迈进……就这样前所未有的新偶像诞生。',
+                        '“十八岁。高中最后一年。明明如此，六花却……仍然是个中二病”。升入大学的考试近在眼前，高中三年级到来前的春假。富㭴勇太和小鸟游六花的共同生活依然一成不变。但他们的上位契约似乎仍未缔结……这样的某一天，六花的姐姐十花宣言要将六花带去意大利。她说自己的工作已经安定下来，因此要携家迁居。勇太虽然感到焦躁，但十花却提出了「不能就这么放着考大学也很危险的六花不管」这样的合理意见。这样下去的话，两人就要被迫分开。担心他们的丹生谷等一如往常的成员，对勇太提出了逃跑的提案。就这样，以日本全国为舞台，两人的逃亡剧就此展开。',
+                        ''
+                    ]
+                }
+            })
+        </script>
+</body>
+</html>
